@@ -22,7 +22,7 @@ public class SignupTest extends TestBase {
 	}
 	
 	@Test
-	public void getTitle() {
+	public void validateTitleTest() {
 		String title = driver.getTitle();
 		System.out.println("Title : " + title);
 		

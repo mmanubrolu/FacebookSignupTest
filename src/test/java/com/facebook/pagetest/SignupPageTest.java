@@ -8,10 +8,10 @@ import org.testng.annotations.Test;
 import com.facebook.page.SignupPage;
 import com.facebook.testbase.TestBase;
 
-public class SignupTest extends TestBase {
+public class SignupPageTest extends TestBase {
 	public SignupPage signupPage;
 	
-	public SignupTest() {
+	public SignupPageTest() {
 		super();
 	}
 	

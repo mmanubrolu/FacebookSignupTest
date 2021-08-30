@@ -21,8 +21,7 @@ public class Utility extends TestBase {
 	public static int PAGE_LOAD_TIMEOUT= 50;
 	public static int IMPLICIT_LOAD_TIMEOUT=50;
 	
-	public static String TESTDATA_SHEET_PATH = "/Users/naveenkhunteta/Documents/workspace"
-			+ "/FreeCRMTest/src/main/java/com/crm/qa/testdata/FreeCrmTestData.xlsx";
+	public static String TESTDATA_SHEET_PATH = "C:\\Users\\malli\\workspace\\FacebookSignup\\FacebookSignupTest\\src\\main\\java\\com\\facebook\\testdata\\facebookaccountcreationtestdata.xlsx";
 
 	static Workbook book;
 	static Sheet sheet;
@@ -50,10 +49,10 @@ public class Utility extends TestBase {
 		Object[][] data = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
 		// System.out.println(sheet.getLastRowNum() + "--------" +
 		// sheet.getRow(0).getLastCellNum());
-		for (int i = 0; i < sheet.getLastRowNum(); i++) {
-			for (int k = 0; k < sheet.getRow(0).getLastCellNum(); k++) {
+		for (int i = 0; i <sheet.getLastRowNum(); i++) {
+			for (int k = 0; k <sheet.getRow(0).getLastCellNum(); k++) {
 				data[i][k] = sheet.getRow(i + 1).getCell(k).toString();
-				// System.out.println(data[i][k]);
+				System.out.println(data[i][k]);
 			}
 		}
 		return data;

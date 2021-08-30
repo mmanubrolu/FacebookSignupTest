@@ -6,10 +6,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.facebook.page.HomePage;
+import com.facebook.page.SignupPage;
 import com.facebook.testbase.TestBase;
 
 public class HomePageTest extends TestBase {
 	public HomePage homePage;
+	public SignupPage signupPage;
 	
 	public HomePageTest() {
 		super();
@@ -37,6 +39,11 @@ public class HomePageTest extends TestBase {
 	public void validatePWDLinkTest() {
 		boolean isPWDLinkDisplayed = homePage.ispwdLinkDisplayed();
 		Assert.assertTrue(isPWDLinkDisplayed, "Home Page pwd link was not displayed");
+	}
+	
+	@Test(priority=4)
+	public void clickOnCrateAccountButtonTest() {
+		signupPage = homePage.clickOnCreateAccountButton();
 	}
 	
 	@AfterMethod

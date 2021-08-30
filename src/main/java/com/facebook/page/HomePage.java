@@ -17,21 +17,25 @@ public class HomePage extends TestBase{
 	@FindBy(id="u_0_2_zN")
 	WebElement createAccoutButton;
 	
+	@FindBy(xpath="//a[@title='English (UK)']")
+	WebElement changeToEnglish;
+	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
 
 	public boolean isLogDisplayed() {
-		
+		changeToEnglish.click();
 		return logo.isDisplayed();
 	}
 	
 	public boolean ispwdLinkDisplayed() {
-		
+		changeToEnglish.click();
 		return forgotPasswordLink.isDisplayed();
 	}
 	
 	public SignupPage clickOnCreateAccountButton() {
+		changeToEnglish.click();
 		createAccoutButton.click();
 		return new SignupPage();
 	}
